@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Chulu's World</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        </head>
+    <body id="contact">
+        
+        <header>
+            <nav>
+            <label class="logo">Happiness</label>
+        
+            <ul>   
+                   <li> <a href="index.html">Home </a> </li>
+                   <li> <a href="home.html">About me </a> </li>
+                   <li><a class="active" href="contact.html">Contact us</a></li>
+                   </ul>
+            </nav>
+            
+        </header>
+        <h1>Contact me</h1>
+<table id="info">
+    <tr>
+        <td><img id="email" src="media/email.jpg" alt="Error in displaying image"></td>
+        <td><img id="address" src="media/adress.png" alt="Error in displaying image"></td>
+        <td><img id="phone" src="media/phone.png" alt="Error in displaying image"></td>
+    </tr>
+    <tr id="details">
+        <td ><p id="pemail"></p></td>
+        <td><p id="padress"></p></td>
+        <td><p id="pnum"></p></td>
+    </tr>
+</table>
+        <div class="myForm">
+            <div id="error_messages"></div>
+            <form name="myFrm" action="https://formspree.io/f/mrgjqrbw" method="post">
+                <input type="text" name="name" id="name" placeholder="Enter your name.." required><br>
+                <input type="text" name="surname" id="surname" placeholder="Enter your surname.." required><br>
+                <input type="email" name="email" id="mail" placeholder="mail@example.com" required><br>
+                <textarea rows="8" cols="42" name ="message" id="message" placeholder="Send me a message..." required></textarea><br>
+                <input type="submit" onclick="validateForm(true)" value="submit" id="bttn">
+            </form>
+
+        </div>
+        
+        <div id="box">
+            <div id="main">
+
+            </div>
+        </div>
+        <p id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14399.784036214123!2d28.088139069775394!3d-25.5401753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfcf9c4eedb233%3A0x9e2de5e61f9e48e7!2sTshwane%20University%20of%20Technology%20-%20Soshanguve%20South%20Campus%20-%20TUT!5e0!3m2!1sen!2sza!4v1645544932049!5m2!1sen!2sza"
+             width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
+    </body>
+    <script >
+        var data1 = document.getElementById('pemail');
+var data2 =document.getElementById('padress');
+var data3 = document.getElementById('pnum');
+
+ data1.innerHTML = "zazinichulumanco94@gmail.com";
+data2.innerText= "11 Willem De Zwaan Place\n" ;
+data2.innerText = data2.innerText + "Philip Nel Park\n";
+data2.innerText =data2.innerText +"Pretoria West,0183";
+data3.innerHTML ="0673984574\n";
+data3.innerHTML = data3.innerHTML +"/0682398964"; 
+
+function validateForm()
+{
+    let fname = document.forms["myFrm"]["name"].value;
+    let lname =  document.forms["myFrm"]["surname"].value;
+    let email = document.forms["myFrm"]["email"].value;
+    let msg = document.forms["myFrm"]["message"].value;
+
+    var regname= /^[a-zA-Z]+ [a-zA-Z]+$/;
+    if(!regname.test(fname))
+    {
+        alert ("Invalid name given")
+        document.getElementById('name').focus();
+        return false;
+    }    else
+    {
+        return true;
+    }
+    
+}
+
+
+    </script>
+    <footer id="footer">
+        <p style="color:black;"><u>Find me on mysocial platforms</u><br>
+            <a href="https://instagram.com/chulu_zazini?utm_medium=copy_link">
+                <img width="40px" src="media/instagram.png" alt="Cannot display message">
+                </a>
+                <a href="https://www.facebook.com/chulumanco.zazini"><img width="40px" src="media/facebook.png"></a>
+        </p>
+    </footer>
+    </body>
+</html>
